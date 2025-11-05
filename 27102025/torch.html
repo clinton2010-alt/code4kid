@@ -4,21 +4,22 @@
     <title>Torch Light Project</title>
 </head>
 <body style="background-color: black;">
-    <div id="torch" style="height: 50px; width: 50px; border-radius: 1000px; border: 2px solid grey"></div>
+    <div id="clinton-torch" style="height: 50px; width: 50px; border-radius: 1000px; border: 2px solid grey; transition: background-color 2s "></div>
     <div>
         <button style="background-color: green;" onclick="turnOn()">ON</button> 
-        <button style="background-color: red;" onclick="turnOff()">OFF</button>
+        <button style="background-color: red;" onclick="turnOffslowly()">OFF</button>
     </div>
 </body>
 </html>
 <script>
-    const torchElement = document.getElementById("torch");
+    const torchElement = document.getElementById("clinton-torch");
 
     function turnOn() {
-        torchElement.style.backgroundColor = "white";
+        torchElement.style.backgroundColor = "blue";
     }
 
-    function turnOff() {
+    function turnOffslowly() {
         torchElement.style.backgroundColor = "black";
+		
     }
 </script>

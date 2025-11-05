@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang"en">
 <head>
-	<title>
-		 MY BOOK
+	<title style="color:green">
+		🚀 MISSION CONTROL
 	</title>
     <style>
         .action-btn {
@@ -196,3 +196,27 @@
         </div>
 </body>
 </html>
+<script>
+	const allbutton = document.getElementsByClassName("action-btn");
+	Array.from(allbutton).forEach(button => {
+		button.addEventListener("click", () => {
+			const key = button.textContent;
+			if (key === "Analize") {
+				button.textContent = "📑Analyzed";
+				button.style.backgroundColor = "green";
+				button.style.color = "white";
+			}
+			if (key === "Copy") {
+				button.textContent = "📤Copied";
+				button.style.backgroundColor = "green";
+				button.style.color = "white";
+			}
+			if (key === "Share") {
+				button.textContent = "📥Shared";
+				button.style.backgroundColor = "green";
+				button.style.color = "white";
+			}
+		});
+	});
+	
+</script>
