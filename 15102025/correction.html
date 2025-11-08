@@ -17,6 +17,12 @@
         .action-btn:hover {
             background-color: #eeeeef; 
         }
+		online friends {
+			background-color: green;
+			height: 7px;
+			width: 7px;
+			border-radius: 50px;
+			margin-top: 10px; margin-left: 50px;
     </style>
 </head>
 <body style="margin:0; background-color:#f0f2f5;">
@@ -206,3 +212,21 @@
         </div>
 </body>
 </html>
+<script>
+	const allbutton = document.getElementsByClassName("action-btn");
+	Array.from(allbutton).forEach(button => {
+		button.addEventListener("click", () => {
+			const key = button.textContent;
+			if (key === "👍 Like") {
+				button.textContent = "👍 Liked";
+				button.style.backgroundColor = "grey";
+				button.style.color = "blue";
+			}
+			if (key === "👬 Share") {
+				button.textContent = "👬 Shared";
+				button.style.backgroundColor = "grey";
+				button.style.color = "blue";
+			}
+		});
+	});
+</script>
