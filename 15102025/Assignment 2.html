@@ -36,35 +36,55 @@
 			border-radius: 50px;
 			margin-top: 10px;
 			margin-left: 70px;
-			font-size:20px
-			animation:aka-blink is infinite;
+			font-size:20px;
+			animation: aka-blink 1s infinite;
 		}
-		 @keyframes aka-blink {
-			0%, 50% { opacity: 1; }
+        @keyframes aka-blink {
+            0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0.3; }
+        }
+        body {
+            margin:0;
+            background-color:black;
+        }
+        #header {
+            background-color:black; 
+            font-weight:bold; 
+            font-size:40px; 
+            color:white; 
+            height:50px; 
+            padding-bottom:10px; 
+            display:flex; 
+            border:2px solid green;
+        }
+        .logo {
+            font-size:25px; 
+            padding-left:300px; 
+            margin-top:12px; 
+            color:green
+        }
     </style>
 </head>
-<body style="margin:0;background-color:black;">
-	<div style="background-color:black; font-weight:bold; font-size:40px; color:white; height:50px; padding-bottom:10px; display:flex; border:2px solid green ">
-		<div style="font-size:25px; padding-left:300px; margin-top:12px; color:green">
+<body>
+	<div id="header">
+		<div class="logo">
 			🚀MISSION CONTROL
 		</div>
 		<div style="color:green; font-size:20px; margin-left:250px; margin-top:17px">
 		    System Online
 		</div>
-		
-	</div>
-        <div style="display:flex;">
+
+        <div style="display:flex; margin-left: 15%;">
             <div class="status-light" style="background-color: red;"></div>
             <div class="status-light" style="background-color: green;"></div>
             <div class="status-light" style="background-color: yellow;"></div>
         </div>
 	</div>
+        
 	<div style="display:flex">
 		<div style="background-color: black; width: 15%; margin-top: 20px; margin-left: 300px; border-radius: 10px; padding-top: 20px; border:2px solid green">
 			<div style="background-color: black;  width:120px; height:120px; border-radius: 1000px; display:flex; justify-content:center; align-items:center; font-size:50px; margin: 0px auto;border:2px solid green">
-                        👩‍🚀
-				
+                👩‍🚀
 			</div>
 			<div style="font-size: 20px; font-weight: bold; text-align: center; margin-top: 15px; color:green">
 				Commander Alex
@@ -89,12 +109,16 @@
 		</div>
         <div style="background-color:black; margin-top:20px; margin-left:20px; border-radius:10px;padding:20px; width: 30%; border:2px solid green">
             <div style="background-color:black; border-radius:10px; padding:15px; margin-bottom:20px; border:2px solid green">
-                <textarea placeholder="Enter Mission Log Entry...." style="resize: none; width: 99%; border: none; outline: none; height: 50px; background-color:black; color:green"></textarea>
+                <textarea id="text-content" placeholder="Enter Mission Log Entry...." style="resize: none; width: 99%; border: none; outline: none; height: 50px; background-color:black; color:green"></textarea>
                 <div>
-                    <button style="background-color: black;color: white;border: none;padding-left: 20px;padding-right: 20px;padding-top: 7px;padding-bottom: 7px;border-radius: 5px;border:1px solid green;color:green; cursor:pointer">
+                    <button id="submit-new-entry" style="background-color: black;color: white;border: none;padding-left: 20px;padding-right: 20px;padding-top: 7px;padding-bottom: 7px;border-radius: 5px;border:1px solid green;color:green; cursor:pointer">
                         Log Entry
                     </button>
                 </div>
+            </div>
+
+            <div id="new-entry">
+
             </div>
             
             <div style="background-color:black; height:150px; border:1px solid #e4e5e9; border-radius:5px; padding: 15px; margin-bottom: 20px; border:2px solid green">
@@ -252,5 +276,35 @@
 			}
 		});
 	});
+
+    const submitBtn = document.getElementById("submit-new-entry");
+    const entrySection = document.getElementById("new-entry");
+    const textContent = document.getElementById("text-content");
+    
+    submitBtn.addEventListener('click', () => {
+        const currentData = entrySection.innerHTML;
+        const newEntry = '<div style="background-color:black; height:150px; border:1px solid #e4e5e9; border-radius:5px; padding: 15px; margin-bottom: 20px; border:2px solid green">' +
+                            '<div style="display: flex; margin-bottom: 10px;">' +
+                                '<div style="display:flex; justify-content:center; align-items:center; background-color: black; width:40px; height:40px; border-radius: 1000px; border:1px solid green">' +
+                                    '👩‍🚀' +
+                                '</div>' +
+                                '<div style="margin-top: 10px; margin-left: 10px; color:green">' +
+                                    '<b>Commander Akachukwu</b>' +
+                                    '<div style="font-size: 10px; color: grey">T+02:15:30</div>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div>' +
+                                '<div style="color:grey"> ' + textContent.value + ' </div>' +
+                                '<hr>' +
+                                '<div style="display: flex; gap: 30px;">' +
+                                    '<div class="action-btn">Analize</div>' +
+                                    '<div class="action-btn">Copy</div>' +
+                                    '<div class="action-btn">Share</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>';
+        entrySection.innerHTML = newEntry + currentData;
+        document.getElementById("text-content").value = ''
+    })
 	
 </script>
