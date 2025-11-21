@@ -73,6 +73,89 @@
             display:flex; 
             margin-left: 15%;
         }
+		.name-of-commander-section {
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 15px;
+			color:green;
+		}
+		.style-of-mission-commander {
+			font-size: 15px;
+			text-align: center;
+			color: grey
+		}
+		.style-of-the-mission-control {
+			padding-left: 20px; 
+			padding-right: 20px;
+			padding-top: 25px;
+			padding-bottom: 20px;
+			color:green;
+		}
+		.style-to-the-second-part-of-the-mission-control {
+			background-color:black;
+			margin-top:20px;
+			margin-left:20px;
+			border-radius:10px;
+			padding:20px;
+			width: 30%;
+			border:2px solid green;
+		}
+		.style-to-the-log-entry {
+			resize: none;
+			width: 99%;
+			border: none;
+			outline: none;
+			height: 50px;
+			background-color:black;
+			color:green;
+		}
+		.log-entry-pro {
+			background-color: black;
+			color: white;
+			border: none;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			border-radius: 5px;
+			border:1px solid green;
+			color:green;
+			cursor:pointer;
+		}
+		.emoji-style {
+			background-color:black;
+			height:150px;
+			border:1px solid #e4e5e9;
+			border-radius:5px;
+			padding: 15px;
+			margin-bottom: 20px;
+			border:2px solid green;
+		}
+		.commander-alex-style {
+			margin-top: 10px;
+			margin-left: 10px;
+			color:green;
+		}
+		.time-style {
+			font-size: 10px;
+			color: grey;
+		}
+		.button-style {
+			display: flex;
+			gap: 30px;
+		}
+		.emoji-style-pro {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			background-color: black; 
+			width:40px; height:40px; 
+			border-radius: 1000px;
+			border:1px solid green;
+		}
+			
+			
     </style>
 </head>
 <body>
@@ -96,13 +179,13 @@
 			<div style="background-color: black;  width:120px; height:120px; border-radius: 1000px; display:flex; justify-content:center; align-items:center; font-size:50px; margin: 0px auto;border:2px solid green">
                 👩‍🚀
 			</div>
-			<div style="font-size: 20px; font-weight: bold; text-align: center; margin-top: 15px; color:green">
+			<div class="name-of-commander-section">
 				Commander Alex
 			</div>
-			<div style="font-size: 15px; text-align: center; color: grey">
+			<div class="style-of-mission-commander">
 				Mission Commander
 			</div>
-			<div style="padding-left: 20px; padding-right: 20px; padding-top: 25px; padding-bottom: 20px; color:green;">
+			<div class="style-of-the-mission-control">
 				<div>🛰Satellite Tracking</div>
 				<hr>
 				<div>🌍Earth Monitoring</div>
@@ -117,11 +200,11 @@
 				<hr>
 			</div>
 		</div>
-        <div style="background-color:black; margin-top:20px; margin-left:20px; border-radius:10px;padding:20px; width: 30%; border:2px solid green">
+        <div class="style-to-the-second-part-of-the-mission-control">
             <div style="background-color:black; border-radius:10px; padding:15px; margin-bottom:20px; border:2px solid green">
-                <textarea id="text-content" placeholder="Enter Mission Log Entry...." style="resize: none; width: 99%; border: none; outline: none; height: 50px; background-color:black; color:green"></textarea>
+                <textarea id="text-content" placeholder="Enter Mission Log Entry...." class="style-to-the-log-entry"></textarea>
                 <div>
-                    <button id="submit-new-entry" style="background-color: black;color: white;border: none;padding-left: 20px;padding-right: 20px;padding-top: 7px;padding-bottom: 7px;border-radius: 5px;border:1px solid green;color:green; cursor:pointer">
+                    <button id="submit-new-entry" class="log-entry-pro">
                         Log Entry
                     </button>
                 </div>
@@ -131,20 +214,20 @@
 
             </div>
             
-            <div style="background-color:black; height:150px; border:1px solid #e4e5e9; border-radius:5px; padding: 15px; margin-bottom: 20px; border:2px solid green">
+            <div class="emoji-style">
                 <div style="display: flex; margin-bottom: 10px;">
                     <div style="display:flex; justify-content:center; align-items:center; background-color: black; width:40px; height:40px; border-radius: 1000px; border:1px solid green">
                        👩‍🚀
                     </div>
-                    <div style="margin-top: 10px; margin-left: 10px; color:green">
+                    <div class="commander-alex-style">
                         <b>Commander Alex</b>
-                        <div style="font-size: 10px; color: grey">T+02:15:30</div>
+                        <div class="time-style">T+02:15:30</div>
                     </div>
                 </div>
                 <div>
                     <div style="color:grey">All systems operational.Satellite tracking shows 3 objects in low Earth orbit.Weather conditions optimal for launch window. ready for next phase of mission </div>
                     <hr>
-                    <div style="display: flex; gap: 30px;">
+                    <div class="button-style">
                         <div class="action-btn">Analize</div>
                         <div class="action-btn">Copy</div>
                         <div class="action-btn">Share</div>
@@ -155,7 +238,7 @@
 
             <div style="background-color:black; height:150px; border:1px solid #e4e5e9; border-radius:5px; padding: 15px; margin-bottom: 20px; border:2px solid green">
                 <div style="display: flex; margin-bottom: 10px;">
-                    <div style="display:flex; justify-content:center; align-items:center; background-color: black; width:40px; height:40px; border-radius: 1000px; border:1px solid green">
+                    <div class="emoji-style-pro">
                         👩‍🚀
                     </div>
                     <div style="margin-top: 10px; margin-left: 10px; color:green">
@@ -166,7 +249,7 @@
                 <div>
                     <div style="color:grey">Reasearch module functioning perfectly. collecting amospheric data from Mars probe. Temperature readings stable at -65c. solar panels at 98% efficiently.</div>
                     <hr>
-                    <div style="display: flex; gap: 30px;">
+                    <div class="button-style">
                         <div class="action-btn">Analize</div>
                         <div class="action-btn">Copy</div>
                         <div class="action-btn">Share</div> 
@@ -179,11 +262,11 @@
 
             <div style="background-color:black; height:150px; border:1px solid #e4e5e9; border-radius:5px; padding: 15px; border:2px solid green">
                 <div style="display: flex; margin-bottom: 10px;">
-                    <div style="display:flex; justify-content:center; align-items:center; background-color: black; width:40px; height:40px; border-radius: 1000px; border:1px solid green">
+                    <div class="emoji-style-pro">
                         👩‍🚀
                      ‍   
                     </div>
-                    <div style="margin-top: 10px; margin-left: 10px; color:green">
+                    <div class="commander-alex-style">
                         <b>Commander Alex</b>
                         <div style="font-size: 10px; color: grey">T+00:30:45</div>
                     </div>
@@ -191,7 +274,7 @@
                 <div>
                     <div style="color:grey">Mission Control to all stations: Beginning countdown sequence. T-minus 10 minutes to launch. All personel in position. Weather green, systems go. </div>
                     <hr>
-                    <div style="display: flex; gap: 30px;">
+                    <div class="button-style">
 						<div class="action-btn">Analize</div>
                         <div class="action-btn" >Copy</div>
                         <div class="action-btn">Share</div>    
@@ -202,10 +285,10 @@
         <div style="background-color:black; margin-top:20px; margin-left:20px; border-radius:10px;padding:20px; padding-left: 25px; border:2px solid green">
             <div style="margin-bottom: 25px; color:green; margin-left:50px"><b>CREW STATUS</b></div>
             <div style="display: flex; margin-bottom: 10px;">
-                <div style="display:flex; justify-content:center; align-items:center; background-color: black; width:30px; height:30px; border-radius: 1000px; border:2px solid green">
+                <div style="display:flex; justify-content:center; align-items:center; background-color:black ; width:30px; height:30px; border-radius: 1000px; border:2px solid green">
                     👩‍🚀
                 </div>
-                <div style="margin-top: 5px; margin-left: 10px; color:grey; cursor:pointer; ">
+                <div style="margin-top: 5px; margin-left: 10px; color:grey; cursor:pointer;">
                  Commander Alex   
                 </div>
 				<div>
@@ -214,7 +297,7 @@
             </div>
             <hr>
             <div style="display: flex; margin-bottom: 10px;">
-                <div style="display:flex; justify-content:center; align-items:center; background-color: black; width:30px; height:30px; border-radius: 1000px; border:2px solid green">
+                <div style="display:flex; justify-content:center; align-items:center; background-color:black ; width:30px; height:30px; border-radius: 1000px; border:2px solid green">
                  👩‍🚀   
                 </div>
                 <div style="margin-top: 5px; margin-left: 10px; color:grey; cursor:pointer;">
@@ -226,7 +309,7 @@
             </div>
             <hr>
             <div style="display: flex; margin-bottom: 10px;">
-                <div style="display:flex; justify-content:center; align-items:center; background-color: black; width:30px; height:30px; border-radius: 1000px; border:2px solid green">
+                <div style="display:flex; justify-content:center; align-items:center; background-color:black ; width:30px; height:30px; border-radius: 1000px; border:2px solid green">
 					👩‍🚀   
                 </div>
                 <div style="margin-top: 5px; margin-left: 10px; color:grey; cursor:pointer;">

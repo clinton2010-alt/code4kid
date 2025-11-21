@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang"en">
+<head>
+	<title>
+		If-else condition
+	</title>
+<body>
+<input id="user-age"/>
+<button onclick="checkAge()">
+Check Access
+</button>
+
+</body>
+</head>
+</html>
+<script>
+	
+
+	function checkAge() {
+	const age = document.getElementById("user-age").value;
+	const ageNumber = parseInt(age);
+	if (ageNumber >= 10) {
+  alert("You can join the coding club!");
+} else {
+  alert("You are too young for now.");
+  }
+}
+</script>
