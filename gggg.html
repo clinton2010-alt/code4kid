@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		  page
+	</title>
+</head>
+    document.querySelector('.post-button').addEventListener('click', function() {
+      const input = document.querySelector('.post-input');
+      const content = input.value.trim();
+      
+      if (content) {
+        const postContainer = document.querySelector('.center-content');
+        const newPost = document.createElement('div');
+        newPost.className = 'post';
+        newPost.innerHTML = `
+          <div class="post-header">
+            <div class="post-avatar">👧</div>
+            <div class="post-info">
+              <div class="post-author">Emma Johnson</div>
+              <div class="post-time">Just now</div>
+            </div>
+          </div>
+          <div class="post-content">${content}</div>
+          <div class="post-actions">
+            <button class="action-button">👍 Like</button>
+            <button class="action-button">💬 Comment</button>
+            <button class="action-button">📤 Share</button>
+          </div>
+        `;
+        
+        const postBox = document.querySelector('.post-box');
+        postContainer.insertBefore(newPost, postBox.nextSibling);
+        input.value = '';
+      }
+    });
+    
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('action-button') && e.target.textContent === '👍 Like') {
+        if (e.target.textContent === '👍 Like') {
+          e.target.textContent = '❤️ Liked';
+          e.target.style.color = '#e31b23';
+        } else {
+          e.target.textContent = '👍 Like';
+          e.target.style.color = '#65676b';
+        }
+      }
+    });
+  
